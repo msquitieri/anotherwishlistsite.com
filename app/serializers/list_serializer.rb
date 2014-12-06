@@ -1,6 +1,5 @@
 class ListSerializer < EmberSerializer
-  attributes :id, :title, :start_date, :end_date
+  attributes :id, :title, :start_date, :end_date, :user
 
-  belongs_to :user
-  has_many   :items
+  has_many :items
 end
