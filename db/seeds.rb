@@ -13,5 +13,7 @@ list = List.create(title: "My Birthday List",
               price: Faker::Commerce.price,
               image: Faker::Company.logo,
               link: Faker::Internet.url,
-              notes: Faker::Lorem.sentence(3))
+              notes: Faker::Lorem.sentence(3),
+              quantity: Faker::Number.digit,
+              priority: Faker::Number.digit)
 end
