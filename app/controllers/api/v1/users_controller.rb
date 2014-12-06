@@ -1,4 +1,4 @@
-class Api::V1::ListsController < Api::V1::ResourceController
+class Api::V1::UsersController < Api::V1::ResourceController
 
   private
 
