@@ -32,6 +32,8 @@ gem "ember-source", "~>1.1"
 gem 'will_paginate', '~> 3.0'
 
 
+gem 'devise', '~> 3.4.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
