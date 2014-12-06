@@ -1,5 +1,3 @@
-class ListSerializer < EmberSerializer
-  attributes :id, :title, :start_date, :end_date
-
-  belongs_to :list
+class ItemSerializer < EmberSerializer
+  attributes :id, :title, :price, :notes, :image, :link, :quantity, :priority, :list
 end
