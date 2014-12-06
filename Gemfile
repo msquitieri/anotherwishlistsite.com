@@ -38,3 +38,24 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.2'
+  gem 'awesome_print', '~> 1.2.0'
+  # gem 'spring-commands-rspec'
+  # gem 'guard-rspec'
+  # gem 'rb-fsevent' if `uname` =~ /Darwin/
+end
+
+group :development do
+  gem 'better_errors', '~> 1.1.0'
+  gem 'binding_of_caller', '~> 0.7.2'
+end
+
+group :test do
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'shoulda-matchers', '~> 2.6.2'
+  gem 'capybara', '~> 2.4.1'
+  gem 'faker'
+end
+
