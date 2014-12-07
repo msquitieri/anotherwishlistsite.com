@@ -1,6 +1,8 @@
 user = User.create(email: "michael.squitieri@gmail.com",
                    first_name: "Michael",
-                   last_name: "Squitieri")
+                   last_name: "Squitieri",
+                   password: "password",
+                   password_confirmation: "password")
 
 list = List.create(title: "My Birthday List",
                    start_date: Time.now - 1.month,

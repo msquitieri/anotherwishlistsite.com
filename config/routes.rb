@@ -10,8 +10,13 @@ Rails.application.routes.draw do
       resources :users
       resources :lists
       resources :items
+      resource  :session, only: [:create, :destroy] do
+        get :current, to: 'sessions#current'
+      end
     end
   end
+
+  devise_for :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

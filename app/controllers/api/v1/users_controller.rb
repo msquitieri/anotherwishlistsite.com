@@ -7,7 +7,7 @@ class Api::V1::UsersController < Api::V1::ResourceController
   end
 
   def permit_params
-    [:email, :first_name, :last_name]
+    [:email, :first_name, :last_name, :password, :password_confirmation]
   end
 
 end
