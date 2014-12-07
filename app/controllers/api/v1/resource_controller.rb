@@ -54,8 +54,8 @@ class Api::V1::ResourceController < Api::V1::ApiController
     raise "All subclasses must write this method!!"
   end
 
-   def render_object_not_found
+  def render_object_not_found
     render_message(object_sym, 404, "#{resource.to_s} ID not recognized.")
-   end
+  end
 
 end
