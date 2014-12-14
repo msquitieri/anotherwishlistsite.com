@@ -17,9 +17,10 @@ class Api::V1::SessionsController < Api::V1::ApiController
 
   def current
     if current_user.present?
-      respond_with current_user
+      render json: { user: { id: current_user.id, email: current_user.email } }
+      # respond_with current_user
     else
-      render_message(:session, 404, "No current user session.")
+      render_message(:session, 200, "No current user session.")
     end
   end
 
