@@ -7,7 +7,7 @@ class Api::V1::ItemsController < Api::V1::ResourceController
   end
 
   def permit_params
-    [:title, :price, :notes, :image, :link, :quantity, :priority, :list_id]
+    [:title, :price, :notes, :image, :link, :quantity, :priority, :reserved, :list_id]
   end
 
 end
