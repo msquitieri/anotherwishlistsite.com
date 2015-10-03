@@ -38,15 +38,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    ar_transaction_changes (1.0.1)
+      activerecord (>= 3.0, < 5.0)
     arel (6.0.0)
     autoprefixer-rails (5.0.0.3)
       execjs
       json
     awesome_print (1.2.0)
-    barber (0.6.0)
-      ember-source
-      execjs
-      handlebars-source (>= 1.0.0.rc.4)
     bcrypt (3.1.9)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -67,6 +65,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cityhash (0.8.1)
     coderay (1.1.0)
     columnize (0.9.0)
     debug_inspector (0.0.2)
@@ -79,19 +78,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    ember-data-source (1.0.0.beta.14.1)
-      ember-source (~> 1.8)
-    ember-rails (0.16.1)
-      active_model_serializers
-      barber (>= 0.6.0)
-      ember-data-source (>= 1.0.0.beta.5)
-      ember-source (>= 1.1.0)
-      execjs (>= 1.2)
-      handlebars-source (> 1.0.0)
-      jquery-rails (>= 1.0.17)
-      railties (>= 3.1)
-    ember-source (1.9.1)
-      handlebars-source (~> 2.0)
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.4.0)
@@ -103,9 +89,11 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
-    handlebars-source (2.0.0)
     hike (1.2.3)
     i18n (0.7.0)
+    identity_cache (0.2.3)
+      activerecord (>= 3.2)
+      ar_transaction_changes (~> 1.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -228,11 +216,11 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
   capybara (~> 2.4.1)
+  cityhash
   devise (~> 3.4.1)
-  ember-rails (~> 0.14)
-  ember-source (~> 1.1)
   factory_girl_rails (~> 4.4.1)
   faker
+  identity_cache
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.17.1)

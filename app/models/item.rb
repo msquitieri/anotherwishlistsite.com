@@ -1,3 +1,5 @@
 class Item < ActiveRecord::Base
-  belongs_to :list
+  include IdentityCache
+
+  belongs_to :list, touch: true
 end

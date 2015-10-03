@@ -14,6 +14,11 @@ Rails.application.routes.draw do
     end
   end
 
-  devise_for :users
+  # resources :users
+  resources :lists
+
+  devise_for :users do
+    resources :users
+  end
 
 end

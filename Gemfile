@@ -29,9 +29,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem "active_model_serializers", "0.9.0"
-gem "ember-rails", "~>0.14"
-gem "ember-source", "~>1.1"
+# gem "ember-rails", "~>0.14"
+# gem "ember-source", "~>1.1"
 gem 'will_paginate', '~> 3.0'
+
+gem 'identity_cache'
+gem 'cityhash'        # optional, for faster hashing (C-Ruby only)
 
 gem 'devise', '~> 3.4.1'
 
