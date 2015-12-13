@@ -11,6 +11,12 @@ Rails.application.routes.draw do
           get :current, to: 'sessions#current'
         end
       end
+
+      resources :urls, only: [] do
+        collection do
+          get :parse
+        end
+      end
     end
   end
 
