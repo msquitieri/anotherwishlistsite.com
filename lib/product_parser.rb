@@ -49,10 +49,12 @@ class ProductParser
       end
     end
 
-    all_images.map { |img| decorate_image_url(url, img.attr('src')) }
+    all_images.map { |img| decorate_image_url(url, img.attr('src')) }.compact
   end
 
   def decorate_image_url(base_url, image_url)
+    return nil if image_url.nil?
+
     uri = URI.parse(base_url)
 
     # Case 1: '//s3.amazonaws.com/bucket' => 'https://s3.amazonaws.com/bucket'
