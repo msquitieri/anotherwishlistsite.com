@@ -1,6 +1,6 @@
 class Api::V1::UrlsController < Api::V1::ApiController
 
-  def parse
+  def index
     raise_not_found if params[:url].nil?
 
     @url = ProductParser.new(params[:url])

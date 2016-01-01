@@ -12,11 +12,9 @@ Rails.application.routes.draw do
         end
       end
 
-      resources :urls, only: [] do
-        collection do
-          get :parse
-        end
-      end
+      resources :urls, only: :index
+
+      match '/*path', to: 'api#handle_options_request', via: [:options]
     end
   end
 
